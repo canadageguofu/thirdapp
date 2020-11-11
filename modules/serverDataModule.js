@@ -129,7 +129,7 @@ module.exports.getEmployeesByDepartment = function(department){
                 }
             }
             if(retEmployee.length==0){
-                resolve({message:"no results"});
+                resolve({message:"no results returned"});
             }
             else {
                 resolve(retEmployee);
@@ -143,19 +143,18 @@ module.exports.getEmployeesByDepartment = function(department){
 
 module.exports.getEmployeeByNum = function(Num){
     let retEmp = [];
-//    console.log(Num);
- //   console.log("gdgdhd"+ employees.length);
+
      return new Promise(function(resolve,reject){
          try {
              for(k=0; k<employees.length-1;k++){
- //                console.log(employees[k].department);
+                 
                  if (employees[k].employeeNum == Num){
-                    //  console.log(employees[k].employeeNum);
+
                      retEmp.push(employees[k]);
                  }
-             }
+                }
              if(retEmp.length==0){
-                 resolve({message:"no results"});
+                 resolve({message:"no results returned"});
              }
              else {
                  resolve(retEmp);
@@ -199,6 +198,36 @@ module.exports.getDepartmentsNumber = function(){
 module.exports.getManagersNumber = function(){
     return managers.length;
 }
+
+module.exports.addEmployee = function(empployData){
+    return new Promise(function(resolve,reject){
+        try{
+//            console.log(empployData.employeeManagerNum);
+            var obj= {employeeNum: module.exports.getEmployeesNumber()+1,
+                firstName:empployData.firstName,
+                lastName:empployData.lastName,
+                email:empployData.email,
+                SSN:empployData.SSN,
+                addressStreet:empployData.addressStreet,
+                addressCity:empployData.addressCity,
+                addressState:empployData.addressState,
+                addressPostal:empployData.addressPostal,
+                isManager:empployData.isManager,
+                employeeManagerNum:empployData.employeeManagerNum,
+                status:empployData.status,
+                department:empployData.department,
+                hireDate:empployData.hireDate };
+            newJsonData = JSON.stringify(obj);
+ //           console.log(newJsonData);
+         
+            employees.push(JSON.parse(newJsonData));
+            resolve(empployData);
+        } catch(e){
+            reject(e)
+        }
+    });
+ }
+
 
 // function getEmployeesByDepartment(dt) {
 //     console.log(dt);

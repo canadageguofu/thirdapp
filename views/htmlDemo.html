@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 	<head>
 		<title>WEB700</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="/CSS/theme.css" type="text/css">
+		<!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
 	</head>
 
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Student Name</a>
+			<a class="navbar-brand" href="#">Guofu Ge</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -23,9 +25,317 @@
 					<li class="nav-item"><a class="nav-link" href="/employees">Employees</a></li>
 					<li class="nav-item"><a class="nav-link" href="/managers">Managers</a></li>
 					<li class="nav-item"><a class="nav-link" href="/departments">Departments</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/employee/add">Add Employee</a></li>
 				</ul>
 			</div>
 		</nav>
+		<section>
+			<h1>Student and Employee Information Tables</h1>
+			<h3>Student Information Tables</h3>
+		<div class="scroll">
+			<table class="table">
+				<caption>Above are students</caption>
+				<thead class="thead">
+					<tr>
+						<th>Name</th>
+						<th>Subject</th>
+						<th>Mark</th>
+						<th>Final Grade</th>
+						<th>Campus</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">Stdudent 1</td>
+						<td>Math</td>
+						<td>100</td>
+						<td>A+</td>
+						<td rowspan="2"> 
+							<img alt="York" src="/image/york_campus.png">
+						</td>
+					</tr>
+					<tr>
+						<td>Computer</td>
+						<td>90</td>
+						<td>A+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Stdudent 2</td>
+						<td>Math</td>
+						<td>88</td>
+						<td>A+</td>
+						<td rowspan="2">
+							<img alt="Markham" src="/image/markham_campus.jpeg">
+						</td>
+					</tr>
+					<tr>
+						<td>Computer</td>
+						<td>95</td>
+						<td>A+</td>
+					</tr>
+				</tbody>
+				<tfoot class="tfoot">
+					<tr>
+						<th scope="row" colspan="2" >Overall of Class</th>
+						<td>93</td>
+						<td>A+</td>
+						<td>All in GTA area</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+			<h3>Employee Information Table</h3>
+			
+			<table class="table">
+				<caption>Here are employees</caption>
+				<thead>
+					<tr>
+						<th>Deptment Name</th>
+						<th>Employee Name</th>
+						<th>City</th>
+						<th>hireDate</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">Product Development</td>
+						<td>Foster Thorburn</td>
+						<td>New York</td>
+						<td>"4/30/2014"</td>
+					</tr>
+					<tr>
+						<td>Emmy Trehearne</td>
+						<td>New York</td>
+						<td>6/25/2016</td>
+					</tr>
+					<tr>
+						<td>Accounting</td>
+						<td>Ysabel Collyns</td>
+						<td>New York</td>
+						<td>4/18/2011</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th scope="row">Comments</th>
+						<td colspan="3">Totally we have 3 employees all comes from new york</td>
+					</tr>
+				</tfoot>
+			</table>
+			<p>In this section we practiced table skills to show <b>students</b> and <em>Empoyees</em></p>
+		</section>
+		<section>
+			<h1>List</h1> 
+			<h2>List 1 start with unordered list </h2>
+			<ul> 
+				<li>Item A 
+					<ol>
+						<li>Subiteam A.1</li>
+						<li>Subiteam A.2</li>
+						<li>Subiteam A.3</li>
+						<li>Subiteam A.4</li>
+						<li>Subiteam A.5</li>
+					</ol>
+				</li>
+				<li>Item B 
+					<Ol> 
+						<li>Subitem B.1</li> 
+						<li>Subitem B.2</li> 
+						<li>Subitem B.3</li> 
+						<li>Subitem B.4</li> 
+						<li>Subitem B.5</li> 
+					</Ol>
+				</li> 
+				<li>Item C
+					<Ul> 
+						<li>Subitem C.1</li> 
+						<li>Subitem C.2</li> 
+						<li>Subitem C.3</li> 
+						<li>Subitem C.4</li> 
+						<li>Subitem C.5</li> 
+					</Ul>					
+				</li> 
+				<li>Item D
+					<Ul> 
+						<li>Subitem D.1</li> 
+						<li>Subitem D.2</li> 
+						<li>Subitem D.3</li> 
+						<li>Subitem D.4</li> 
+						<li>Subitem D.5</li> 
+					</Ul>					
+				</li> 
+				<li>Item E
+					<Ol> 
+						<li>Subitem E.1</li> 
+						<li>Subitem E.2</li> 
+						<li>Subitem E.3</li> 
+						<li>Subitem E.4</li> 
+						<li>Subitem E.5</li> 
+					</Ol>					
+				</li> 
+				<li>Item F
+					<Ul> 
+						<li>Subitem F.1</li> 
+						<li>Subitem F.2</li> 
+						<li>Subitem F.3</li> 
+						<li>Subitem F.4</li> 
+						<li>Subitem F.5</li> 
+					</Ul>					
+				</li> 
+			</ul>
+			<h2>List 2 start with ordered list </h2>
+			<Ol> 
+				<li>Item A 
+					<Ul>
+						<li>Subiteam A.1</li>
+						<li>Subiteam A.2</li>
+						<li>Subiteam A.3</li>
+						<li>Subiteam A.4</li>
+						<li>Subiteam A.5</li>
+					</Ul>
+				</li>
+				<li>Item B 
+					<Ul> 
+						<li>Subitem B.1</li> 
+						<li>Subitem B.2</li> 
+						<li>Subitem B.3</li> 
+						<li>Subitem B.4</li> 
+						<li>Subitem B.5</li> 
+					</Ul>
+				</li> 
+				<li>Item C
+					<Ul> 
+						<li>Subitem C.1</li> 
+						<li>Subitem C.2</li> 
+						<li>Subitem C.3</li> 
+						<li>Subitem C.4</li> 
+						<li>Subitem C.5</li> 
+					</Ul>					
+				</li> 
+				<li>Item D
+					<Ul> 
+						<li>Subitem D.1</li> 
+						<li>Subitem D.2</li> 
+						<li>Subitem D.3</li> 
+						<li>Subitem D.4</li> 
+						<li>Subitem D.5</li> 
+					</Ul>					
+				</li> 
+				<li>Item E
+					<Ol> 
+						<li>Subitem E.1</li> 
+						<li>Subitem E.2</li> 
+						<li>Subitem E.3</li> 
+						<li>Subitem E.4</li> 
+						<li>Subitem E.5</li> 
+					</Ol>					
+				</li> 
+				<li>Item F
+					<Ul> 
+						<li>Subitem F.1</li> 
+						<li>Subitem F.2</li> 
+						<li>Subitem F.3</li> 
+						<li>Subitem F.4</li> 
+						<li>Subitem F.5</li> 
+					</Ul>					
+				</li> 
+			</Ol>
+			<p>In this section we practiced table skills to show <b>ordered list</b> and <em>undered list</em></p>
+		</section>
+		<section> 
+			<h1>Image</h1>
+			<img alt="Markham" src="/image/markham_campus.jpeg" style="width:200px;height:160px;">
+			<br>
+			<img alt="Snowboarder in halfpipe" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Snowboarder_in_halfpipe.jpg" style="width:200px;height:160px;">
+			<br>
+			<img alt="Image example" src="https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg" style="width:200px;height:160px;">
+			<br>
+			<img alt="Transparency demonstration" src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" style="width:200px;height:160px;">	
+			<br>		
+            <img alt="Tiger" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg" style="width:200px;height:160px;">
+			<p>This section we practice our HTML skill for display image</p>
+		</section> 
+
+		<section> 
+			<h1>Audio</h1>
+			<h2>Local test audio</h2>
+			<audio controls>
+				<source src="/audio/Audio_test.mp4" type="video/mp4">
+				<source src="/audio/Audio_test.ogv" type="video/ogg">
+				 <p>Sorry, your browser doesn't support HTML5 audio </p> 
+			</audio>
+			<br>
+			<h2>J.S.Bach; Partita E major, Gavotte en rondeau (excerpt) - Sirkka Väisänen, violin.</h2>
+			<audio controls>
+				<source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02-ulaw.wav" type="video/wav">
+				<source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02-128k.mp3" type="video/mp4">
+				<source src="/audio/a2002011001-e02-128k.ogg" type="video/ogg">					
+				 <p>Sorry, your browser doesn't support HTML5 audio </p> 
+			</audio>
+			<br>
+			<h2>SoundHelix-Song</h2>
+			<audio controls>
+				<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="video/mp4">
+			    <p>Sorry, your browser doesn't support HTML5 audio </p> 
+			</audio>
+			<br>
+			<h2>Standford gtr-nylon22</h2>
+			<audio controls>
+				<source src="https://ccrma.stanford.edu/~jos/mp3/gtr-nylon22.mp3" type="video/mp4">
+				<source src="https://ccrma.stanford.edu/~jos/mp3/gtr-nylon22.mav" type="video/mav">
+				 <p>Sorry, your browser doesn't support HTML5 audio </p> 
+			</audio>
+			<br>
+			<h2>Standford sitar</h2>
+			<audio controls>
+				<source src="https://ccrma.stanford.edu/~jos/mp3/sitar.mp3" type="video/mp4">
+				<source src="https://ccrma.stanford.edu/~jos/wav/sitar.wav" type="video/wav">
+				 <p>Sorry, your browser doesn't support HTML5 audio </p> 
+			</audio>
+			<p>This section we practice our HTML skill for playing Audio</p>
+		</section> 
+
+		<section> 
+			<h1>Video</h1>
+				<h2>Small local video</h2>
+				<video width="320" height="240" controls>
+					<source src="/video/small.mp4" type="video/mp4">
+					<source src="/video/small.ogv" type="video/ogg">
+					<source src="/video/small.webm" type="video/webm">	
+					<p>Sorry, your browser doesn't support HTML5 video</p> 
+				</video>
+				<h2>Small online video</h2>
+				<video width="320" height="240" controls>
+					<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+					<source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+					<source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
+					<p>Sorry, your browser doesn't support HTML5 video</p> 
+				</video>
+				<h2>Earth video online</h2>
+				<video width="320" height="240" controls>
+					<source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+					<source src="https://file-examples-com.github.io/uploads/2018/04/file_example_OGG_480_1_7mg.ogg" type="video/ogg">
+					<source src="https://file-examples-com.github.io/uploads/2020/03/file_example_WEBM_480_900KB.webm" type="video/webm">
+					<p>Sorry, your browser doesn't support HTML5 video</p> 
+				</video>
+				<h2>Earth video local</h2>
+				<video width="320" height="240" controls>
+					<source src="/video/file_example_WMV_480_1_2MB.mp4" type="video/mp4">
+					<source src="/file_example_OGG_480_1_7mg.ogg" type="video/ogg">
+					<source src="/video/file_example_WEBM_480_900KB.webm" type="video/webm">
+					<p>Sorry, your browser doesn't support HTML5 video</p> 
+				</video>
+				<h2>Blue Sky and Clouds video</h2>
+				<video width="320" height="240" controls>
+					<source src="/video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.ogv" type="video/ogg">
+					<source src="https://www.dropbox.com/s/nbhxvvvqy4uddgy/Sample_854x480/video/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.mp4" type="video/mp4">
+					<source src="https://cdn.videvo.net/videvo_files/video/free/2014-06/small_watermarked/Blue_Sky_and_Clouds_Timelapse_0892__Videvo_preview.webm" type="video/webm">
+					<p>Sorry, your browser doesn't support HTML5 video</p> 
+				</video>
+				<p>This section we practice our HTML skill for playing video</p>
+		</section> 
+
+
 
 		<div class="container">
 			<div class="row">
