@@ -1,0 +1,51 @@
+<div class="row">     
+    <div class="col-md-12 ">           
+        <br>           
+        <h2>Employees</h2>           
+        <hr /> 
+        <p>
+        {{#unless employees}}
+                <div class="col-md-12 text-center">             
+                    <strong>{{message}}</strong> 
+                </div> 
+        {{else}}
+                <table class="table-responsive",border="1" width=100%>
+                    <thead>
+                            <!--th>Index</th-->
+                            <th>Employee Num</th>
+                            <th>Full Name</th>
+                            <th width="22%">Email</th>
+                            <th width="25%">Address</th>
+                            <th>Manager ID</th>
+                            <th>Status</th>
+                            <th>Department</th> 
+                            <th>Hired On</th>           
+                    </thead>
+                    <tbody>
+                        {{#each employees}}
+                            <tr>
+                                <!--td>{{@index}}</td-->
+                                <td>{{employeeNum}}</td>
+                                <!--td ><a style="color: blue;" href="'http://localhost:8080/employees/' + {{employeeNum}}" >{{firstName}} {{lastName}}</a> </td-->
+                                <td style ="color:blue;text-decoration: underline;"  onclick="location.href='http://localhost:8080/employees/' + {{employeeNum}}">{{firstName}} {{lastName}}</td>
+                                <!--td>{{firstName}} {{lastName}}</td-->
+                                <!--td width="22%" href="mailto:"+ {{email}} target="_blank" rel="noopener noreferrer">{{email}}</td-->
+                                <td width="22%"><a href="mailto:" + {{email}} target="_blank" rel="noopener noreferrer">{{email}}</a> </td>
+                                <td width="25%">{{addressStreet}},{{addressCity}},{{addressState}},{{addressPostal}}</td>
+                                <td>{{employeeManagerNum}}</td>
+                                <td>{{status}}</td>
+                                <!--td>{{department}}</td-->
+                                <td style ="color:rgb(10, 5, 54);text-decoration: underline;"  onclick="location.href='http://localhost:8080/employees?department=' + {{department}}">{{department}}</td> 
+                                <td>{{hireDate}}</td>                                            
+                            </tr>
+                        {{else}}
+                            <div>
+                                <strong>{{message}}</strong> 
+                            </div>
+                        {{/each}}
+                    </tbody>
+                </table>
+        {{/unless}}
+    </p>
+    </div> 
+</div>

@@ -98,7 +98,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Manager:</label>
-                                        <input class="form-control"  type="checkbox" unchecked id="isManager" name="isManager" value=false onchange=isManagerFunction() />
+                                        <input class="form-control"  type="checkbox"  id="isManager" name="isManager" value=false />
                                     </div>
                                 </div>
                     
@@ -157,7 +157,6 @@
             function isManagerFunction() {
             
               var checkBox = document.getElementById("isManager");
-//              var text = document.getElementById("text");
               
               if (checkBox.checked){
                 alert(Boolean(checkBox.checked));
@@ -165,8 +164,6 @@
               } 
               else {
                 document.getElementByID("isManager").value = "false";
-                alert("unchecked");
-                alert(document.getElementByID("isManager").value);
               }
             }
         </script>

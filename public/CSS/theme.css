@@ -121,6 +121,7 @@ a.nav-link:hover{
     text-decoration: underline;
 }
 
+
 table {
     table-layout: fixed;
     width: 100%;
@@ -253,4 +254,12 @@ legend
   padding-bottom: 0.2em;
   text-shadow: 2px 2px 8px #00ff4c;
   font-family: 'Lobster', cursive;
+}
+
+td.col-link{
+    color:blue;
+    text-decoration: underline;
+}
+div.field_hide{
+    display: none
 }

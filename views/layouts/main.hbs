@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+		<title>WEB700 ASSIGNMENT 4--HOME</title>
+		<meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="/CSS/theme.css" type="text/css">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"-->
+        <!--link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-4ZPLezkTZTsojWFhpdFembdzFudphhoOzIunR1wH6g1WQDzCAiPvDyitaK67mp0+" crossorigin="anonymous"-->        
+		<!--h1>Welcome to my website, I will be demonstrating HTML5 principles and techniques, Routing in Express</h1-->
+    </head>
+    <body>
+        <!--nav class="navbar navbar-expand-lg navbar-light bg-light"-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+			<a class="navbar-brand" href="#">Guofu Ge</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item" ><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/employees">Employees</a></li>
+					<li class="nav-item"><a class="nav-link" href="/managers">Managers</a></li>
+					<li class="nav-item"><a class="nav-link" href="/departments">Departments</a></li>
+					<li class="nav-item "><a class="nav-link" href="/employee/add">Add Employee</a></li>
+				</ul>
+				<!--ul class="navbar-nav ml-auto">
+					{{#navLink "/employees"}}Employees{{/navLink}}
+					{{#navLink "/managers"}}Manager{{/navLink}}
+					{{#navLink "/departments"}}Departments{{/navLink}}
+					{{#navLink "/employee/add"}}Add Employee{{/navLink}}
+				</ul-->
+			</div>
+		</nav>
+		<!--header>
+			<h3 class = "letter"><b>WEB700 Assignment 3</b>, <em>Designed by Guofu Ge</em></h3>
+		</header>
+		<div>
+			<b>This site consists of 3 static views:</b>
+			<p>
+				<a class="nav-link" href="/">Home</a> 
+				<a class="nav-link" href="/about">About</a>
+				<a class="nav-link" href=" /htmlDemo"> HTML Demo</a>
+			</p>  
+			<b>as well as 5 routes that supply data , including:</b>
+			<p>
+				<a class="nav-link" href="/employees"> All Employees</a> 
+				<a class="nav-link" href="/employees?department=2">Employees by Department </a>
+				<a class="nav-link" href="/employees/2">Single Employee By Employee Number</a> 
+				<a class="nav-link" href="/managers"> All Managers</a> 
+				<a class="nav-link" href="/departments">All Departments</a>
+				<a class="nav-link active" href="/employee/add">Add Employee</a>
+
+			</p>
+		</div-->
+		<div class="container">
+                  {{{body}}}
+		</div>
+    </body>
+
+</html>

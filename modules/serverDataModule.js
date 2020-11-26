@@ -54,7 +54,7 @@ module.exports.readEmployees = function(){
                     }  
                     else{  // or reject the promise (if used in a promise)      
                         employees = JSON.parse(data);
-                        resolve()
+                        resolve();
                     }
                 });
     });
@@ -147,10 +147,9 @@ module.exports.getEmployeeByNum = function(Num){
      return new Promise(function(resolve,reject){
          try {
              for(k=0; k<employees.length-1;k++){
-                 
                  if (employees[k].employeeNum == Num){
-
                      retEmp.push(employees[k]);
+                     break;
                  }
                 }
              if(retEmp.length==0){
@@ -166,6 +165,36 @@ module.exports.getEmployeeByNum = function(Num){
      });
  }
  
+
+ module.exports.getDepartmentById = function(id){
+        let retDep = [];
+        return new Promise(function(resolve,reject){
+         try {
+             for(k=0; k<departments.length-1;k++){
+                 
+                 if (departments[k].departmentId == id){
+
+                     retDep.push(departments[k]);
+                     console.log(departments[k].departmentName)
+                     break; 
+                 }
+             }
+             if(retDep.length==0){
+                  reject({message:"query returned 0 results"});
+             }
+             else {
+ //                resolve(JSON.stringify({departmentID:id, departmentName:retDep[0].departmentName}));
+                resolve(retDep);
+             }
+         } catch (ex) {
+             reject(ex)
+         }
+ 
+     });
+ }
+
+
+
 
 
 function getDepartments(){
@@ -199,6 +228,7 @@ module.exports.getManagersNumber = function(){
     return managers.length;
 }
 
+
 module.exports.addEmployee = function(empployData){
     return new Promise(function(resolve,reject){
         try{
@@ -222,6 +252,38 @@ module.exports.addEmployee = function(empployData){
          
             employees.push(JSON.parse(newJsonData));
             resolve(empployData);
+        } catch(e){
+            reject(e)
+        }
+    });
+ }
+
+ module.exports.updateEmployee = function(empployData){
+    return new Promise(function(resolve,reject){
+        try{
+                for(k=0; k<employees.length-1;k++){
+                    if (employees[k].employeeNum == empployData.employeeNum){
+                        employees[k].firstName = empployData.firstName;
+
+                        employees[k].lastName=empployData.lastName,
+                        employees[k].email=empployData.email;
+                        employees[k].SSN=empployData.SSN;
+                        employees[k].addressStreet=empployData.addressStreet;
+                        employees[k].addressCity=empployData.addressCity;
+                        employees[k].addressState=empployData.addressState;
+                        employees[k].addressPostal=empployData.addressPostal;
+                        employees[k].isManager=empployData.isManager;
+                        employees[k].employeeManagerNum=empployData.employeeManagerNum;
+                        employees[k].status=empployData.status;
+                        employees[k].department=empployData.department;
+
+
+                        resolve();
+                        break;
+                    }
+                }
+ //           console.log(newJsonData);
+              resolve(newJsonData);
         } catch(e){
             reject(e)
         }
