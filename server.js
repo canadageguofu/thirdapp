@@ -142,6 +142,20 @@ app.get("/employees", (req,res)=>{
     }
 );
 
+app.get("/employee/:num", (req,res)=>{
+    //   console.log(req.params.num);
+       if(req.params.num){
+            myDataModule.getEmployeeByNum(req.params.num).then((data)=>{
+    //               res.send(JSON.stringify(data));
+                   res.render("employee", {employee: data[0] }); 
+                   }).catch((err)=>{
+               //        console.log(err);
+                       res.send(err);
+                   })
+           }
+       }
+   );
+   
 
 
  app.get("/managers", (req,res)=>{
