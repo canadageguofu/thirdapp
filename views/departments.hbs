@@ -3,7 +3,7 @@
         <br>           
             <h2>Departments</h2>           
         <hr /> 
-        <p>
+
             {{#unless departments}}
                 <div class="col-md-12 text-center">             
                     <strong>{{message}}</strong> 
@@ -18,7 +18,6 @@
                     </thead>
                     <tbody>
                             {{#each departments}}
-                                    <!--div-->
                                         <tr>
                                             <!--td>{{@index}}</td-->
                                             <!--td>{{departmentId}}</td-->
@@ -26,11 +25,9 @@
                                             <!--td>{{departmentName}}</td-->
                                             <td style ="color:rgb(1, 22, 10);text-decoration: underline;" onclick="location.href='http://localhost:8080/employees?department=' + {{departmentId}}">{{departmentName}}</td> 
                                         </tr>                            
-                                    <!--/div-->
                                 {{/each}}
                     </tbody>
                 </table>
             {{/unless}}
-        </p> 
     </div> 
 </div> 
