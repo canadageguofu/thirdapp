@@ -21,9 +21,11 @@
                                         <tr>
                                             <!--td>{{@index}}</td-->
                                             <!--td>{{departmentId}}</td-->
-                                            <td style ="color:rgb(37, 7, 231);text-decoration: underline;" onclick="location.href='http://localhost:8080/department/' + {{departmentId}}">{{departmentId}}</td> 
+                                            <td><a style="color: blue;" href="department/{{departmentId}}">{{departmentId}}">{{departmentId}}</a> </td>
+                                            <!--td style ="color:rgb(37, 7, 231);text-decoration: underline;" onclick="location.href='http://localhost:8080/department/' + {{departmentId}}">{{departmentId}}</td--> 
                                             <!--td>{{departmentName}}</td-->
-                                            <td style ="color:rgb(1, 22, 10);text-decoration: underline;" onclick="location.href='http://localhost:8080/employees?department=' + {{departmentId}}">{{departmentName}}</td> 
+                                            <td><a style="color:rgb(1, 22, 10);" href="employees?department={{departmentId}}">{{departmentName}}</a> </td>
+                                            <!--td style ="color:rgb(1, 22, 10);text-decoration: underline;" onclick="location.href='http://localhost:8080/employees?department=' + {{departmentId}}">{{departmentName}}</td--> 
                                         </tr>                            
                                 {{/each}}
                     </tbody>

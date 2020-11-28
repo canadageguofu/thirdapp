@@ -36,7 +36,8 @@
                                 <td>{{employeeManagerNum}}</td>
                                 <td>{{status}}</td>
                                 <!--td>{{department}}</td-->
-                                <td style ="color:rgb(10, 5, 54);text-decoration: underline;"  onclick="location.href='http://localhost:8080/employees?department=' + {{department}}">{{department}}</td> 
+                                <td ><a style="color: rgb(10, 5, 54);" href="employees?department={{department}}">{{department}}</a> </td>
+                                <!--td style ="color:rgb(10, 5, 54);text-decoration: underline;"  onclick="location.href='http://localhost:8080/employees?department=' + {{department}}">{{department}}</td--> 
                                 <td>{{hireDate}}</td>                                            
                             </tr>
                         {{else}}
