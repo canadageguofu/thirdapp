@@ -207,7 +207,8 @@ app.post('/employee/add', function (req, res) {
     // console.log(newJsonData);
     myDataModule.addEmployee(req.body).then(()=>{
  //       console.log(req.body);
-        res.status(301).redirect("http://localhost:8080/employees");
+ //       res.status(301).redirect("http://localhost:8080/employees");
+        res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
     });
   })
 
@@ -217,7 +218,7 @@ app.post('/employee/add', function (req, res) {
 //      res.redirect("/employees"); 
         myDataModule.updateEmployee(req.body).then(()=>{
     //       console.log(req.body);
-           res.status(301).redirect("http://localhost:8080/employees");
+          res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));      
        });
     }); 
 
