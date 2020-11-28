@@ -217,11 +217,14 @@ app.post('/employee/add', function (req, res) {
  //  console.log(JSON.stringify({message:"ok"}));
     // newJsonData = JSON.stringify({employeeNum: myDataModule.getEmployeesNumber()+1 });
     // console.log(newJsonData);
-    myDataModule.addEmployee(req.body).then(()=>{
+        myDataModule.addEmployee(req.body).then(()=>{
  //       console.log(req.body);
  //       res.status(301).redirect("http://localhost:8080/employees");
- //       res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
-          res.render("employees");
+            myDataModule.getAllEmployees().then((data)=>{
+                // res.send(JSON.stringify(data));
+                res.render("employees", {employees: data});
+            //           res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
+            });
     });
   })
 
