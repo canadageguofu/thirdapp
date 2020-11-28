@@ -282,8 +282,8 @@ module.exports.addEmployee = function(empployData){
                         break;
                     }
                 }
- //           console.log(newJsonData);
-              resolve(newJsonData);
+               console.log(employees.length);
+              resolve();
         } catch(e){
             reject(e)
         }

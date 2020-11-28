@@ -183,7 +183,8 @@ app.get("/employee/:num", (req,res)=>{
 app.get("/department/:id", (req,res)=>{
        if(req.params.id){
                 myDataModule.getDepartmentById(req.params.id).then((data)=>{ 
-                    res.render(path.join(__dirname, "/views/department.hbs"),{department:data[0]});
+//                    res.render(path.join(__dirname, "/views/department.hbs"),{department:data[0]});
+                    res.render("department.hbs",{department:data[0]});
                 }).catch((err)=>{
                     res.send(err);
                 })
@@ -195,8 +196,19 @@ app.get("/department/:id", (req,res)=>{
 app.get("/employee/add", (req,res)=>{
 /*       res.send("Hello World!");*/
 //        res.sendFile(path.join(__dirname, "/views/addEmployee.html"));
-    res.render(path.join(__dirname, "/views/addEmployee.hbs"));
+       res.render(path.join(__dirname, "/views/addEmployee.hbs"));
+ //       res.render("addEmployee.hbs");
+
    });
+
+//    app.get("/employee/update", (req,res)=>{
+//     /*       res.send("Hello World!");*/
+//     //        res.sendFile(path.join(__dirname, "/views/addEmployee.html"));
+//            res.render(path.join(__dirname, "/views/employees.hbs"));
+//      //       res.render("addEmployee.hbs");
+    
+//        });
+    
 
 
 
@@ -208,7 +220,8 @@ app.post('/employee/add', function (req, res) {
     myDataModule.addEmployee(req.body).then(()=>{
  //       console.log(req.body);
  //       res.status(301).redirect("http://localhost:8080/employees");
-        res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
+ //       res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
+          res.render("employees");
     });
   })
 
@@ -217,8 +230,18 @@ app.post('/employee/add', function (req, res) {
 //      console.log(req.body);     
 //      res.redirect("/employees"); 
         myDataModule.updateEmployee(req.body).then(()=>{
-    //       console.log(req.body);
-          res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));      
+           console.log(req.body);
+
+  //          res.render("employees");
+
+        myDataModule.getAllEmployees().then((data)=>{
+            // res.send(JSON.stringify(data));
+            res.render("employees", {employees: data});
+ //           res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));
+        });
+ //         res.render("employees", {employees: data});
+  //        res.render("employees")
+ //        res.status(301).redirect(path.join(__dirname, "/views/employees.hbs"));      
        });
     }); 
 
